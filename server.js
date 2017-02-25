@@ -141,8 +141,10 @@ app.get("/all", function(req, res) {
     }
     // Otherwise, send the result of this query to the browser
     else {
-      // res.json(found);
-      res.render("index", found);
+      var foundArticles = {found};
+      // res.json(foundArticles);
+      //HANDLEBARS EXPECTS TO RECEIVE AN OBJECT ARGH so put that young found in an object
+      res.render("index", foundArticles);
     }
   });
 });
@@ -204,7 +206,7 @@ app.listen(PATH, function() {
 //disconnect on sign out
 process.on('SIGINT', function() {
   mongoose.connection.close(function () {
-    console.log('Mongoose disconnected on app termination');
+    console.log(' Mongoose disconnected on app termination');
     process.exit(0);
   });
 });

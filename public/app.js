@@ -1,3 +1,4 @@
+console.log("Connected to app.js!");
 // 1: On Load
 // ==========
 
@@ -38,6 +39,17 @@ $("#scrapeArticles").on("click", function() {
     }
   });
 });
+
+  $(document).on('click', '#myModal', function(e){
+    e.preventDefault();
+    return false;
+  });
+
+  $(document).on('click', '#commentBtn', function(e){
+    e.preventDefault();
+    var comment = $("#articleMessage").val().trim();
+    return false;
+  });
 
 // All users can leave comments on the stories you collect. They should also be allowed to delete whatever comments they want removed. All stored comments should be visible to every user.
 // You'll need to use Mongoose's model system to associate comments with particular articles.
