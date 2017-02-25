@@ -1,0 +1,30 @@
+{
+  "name": "mongscraper",
+  "version": "1.0.0",
+  "description": "web app that lets users leave comments on the latest news scraped from the web.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mtutak/mongScraper.git"
+  },
+  "author": "Matt T",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mtutak/mongScraper/issues"
+  },
+  "homepage": "https://github.com/Mtutak/mongScraper#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.1",
+    "express-handlebars": "^3.0.0",
+    "mongojs": "^2.4.0",
+    "mongoose": "^4.8.4",
+    "morgan": "^1.8.1",
+    "request": "^2.79.0"
+  }
+}
