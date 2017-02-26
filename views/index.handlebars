@@ -1,10 +1,13 @@
 {{#each found}}
-<button type="button" class="btn btn-primary btn-lg selectArticle" data-toggle="modal" data-target="#myModal">
+<button type="button" id="artBtn" class="btn btn-primary btn-lg selectArticle" data-id="{{_id}}" data-toggle="modal" data-target="#myModal">
 {{!--<a class="goTo" href="/{{_id}}">--}}
-<div class="newsItems" data-id="{{_id}}">
-   <h1 class="title">Headline: {{title}}</h1>
-    <p class="summary">Summary: {{summary}}</p>
-    <p class="link"> Link: {{link}}</p>
+<div class="newsItems" data-article="{{_id}}">
+   <h1 class="title">{{title}}</h1>
+    <p class="summary">{{summary}}</p>
+    <p class="link">{{link}}</p>
+    <div class="btnSection" data-id="{{_id}}">
+        <button id="saveArt" type="button" class="btn btn-default">Save Article!</button>
+    </div>
 </div>
 {{!--</a>--}}
 </button>

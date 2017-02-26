@@ -7,11 +7,6 @@ var Schema = mongoose.Schema;
 //create a new schema from constructor to create new message object
 //the new message object shows how the data must look for mongoose to accept it
 var rules = {
-  userName: {
-    type: String,
-    trim: true,
-    required: "String is Required"
-  },
   message: {
     type: String,
     trim: true

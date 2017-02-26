@@ -9,7 +9,8 @@ var Schema = mongoose.Schema;
 var rules = {
   title: {
     type: String,
-    required: "String is Required"
+    required: "String is Required",
+    unique: true
   },
   summary: {
     type: String,
